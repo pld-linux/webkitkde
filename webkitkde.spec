@@ -9,7 +9,7 @@ Summary:	webkitkde
 Summary(pl.UTF-8):	webkitkde
 Name:		webkitkde
 Version:	0
-Release:	0.%{snap}.1
+Release:	0.%{snap}.2
 License:	GPL v2
 Group:		X11/Libraries
 # get it via: svn co svn://anonsvn.kde.org/home/kde/trunk/playground/libs/webkitkde/
