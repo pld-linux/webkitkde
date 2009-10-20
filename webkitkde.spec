@@ -3,18 +3,18 @@
 #
 %define		qt_ver		4.4.3
 %define		kdever		4.2.0
-%define		snap		981623
+%define		snap		1033581
 
-Summary:	webkitkde
-Summary(pl.UTF-8):	webkitkde
+Summary:	webkitkde - QWebkit plugin
+#Summary(pl.UTF-8):	webkitkde
 Name:		webkitkde
 Version:	0
-Release:	0.%{snap}.2
+Release:	0.%{snap}.1
 License:	GPL v2
 Group:		X11/Libraries
 # get it via: svn co svn://anonsvn.kde.org/home/kde/trunk/playground/libs/webkitkde/
 Source0:	%{name}-%{snap}.tar.bz2
-# Source0-md5:	ec03b5d4dd9dbb548bc57e8d404c69d8
+# Source0-md5:	525c643ebbe64862f349a8488d2981a8
 BuildRequires:	QtCore-devel >= %{qt_ver}
 BuildRequires:	QtWebKit-devel >= %{qt_ver}
 BuildRequires:	automoc4
@@ -26,7 +26,8 @@ BuildRequires:	rpmbuild(macros) >= 1.293
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-WebKitKde.
+Kde Part library to use QtWebkit instread of KHtml.
+It works as plugin for konqueror.
 
 #%description -l pl.UTF-8
 
@@ -43,7 +44,7 @@ Header files for webkitkde library.
 Pliki nagłówkowe biblioteki webkitkde.
 
 %prep
-%setup -q -n %{name}
+%setup -q -n %{name}-%{snap}
 
 %build
 install -d build
