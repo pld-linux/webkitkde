@@ -1,12 +1,9 @@
-#
-# Conditional build:
-#
+
 %define		qt_ver		4.4.3
 %define		kdever		4.2.0
 %define		snap		1033581
 
 Summary:	webkitkde - QWebkit plugin
-#Summary(pl.UTF-8):	webkitkde
 Name:		webkitkde
 Version:	0
 Release:	0.%{snap}.1
@@ -26,10 +23,8 @@ BuildRequires:	rpmbuild(macros) >= 1.293
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Kde Part library to use QtWebkit instread of KHtml.
-It works as plugin for konqueror.
-
-#%description -l pl.UTF-8
+KDE part library to use QtWebkit instread of KHTML. It works as plugin
+for Konqueror.
 
 %package devel
 Summary:	Header files for webkitkde library
@@ -50,6 +45,7 @@ Pliki nagłówkowe biblioteki webkitkde.
 install -d build
 cd build
 %cmake .. \
+	-DCMAKE_BUILD_TYPE=%{!?debug:Release}%{?debug:Debug} \
 	-DCMAKE_INSTALL_PREFIX=%{_prefix} \
 %if "%{_lib}" == "lib64"
 	-DLIB_SUFFIX=64
