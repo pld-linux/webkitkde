@@ -1,7 +1,7 @@
 
 %define		qt_ver		4.4.3
 %define		kdever		4.2.0
-%define		snap		1033581
+%define		snap		1038108
 
 Summary:	webkitkde - QWebkit plugin
 Name:		webkitkde
@@ -11,7 +11,7 @@ License:	GPL v2
 Group:		X11/Libraries
 # get it via: svn co svn://anonsvn.kde.org/home/kde/trunk/playground/libs/webkitkde/
 Source0:	%{name}-%{snap}.tar.bz2
-# Source0-md5:	525c643ebbe64862f349a8488d2981a8
+# Source0-md5:	64311bedb59088076552bc5e00406349
 BuildRequires:	QtCore-devel >= %{qt_ver}
 BuildRequires:	QtWebKit-devel >= %{qt_ver}
 BuildRequires:	automoc4
