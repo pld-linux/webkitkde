@@ -13,6 +13,8 @@ Group:		X11/Libraries
 Source0:	%{name}-%{snap}.tar.bz2
 # Source0-md5:	64311bedb59088076552bc5e00406349
 BuildRequires:	QtCore-devel >= %{qt_ver}
+BuildRequires:	QtSvg-devel >= %{qt_ver}
+BuildRequires:	QtUiTools-devel >= %{qt_ver}
 BuildRequires:	QtWebKit-devel >= %{qt_ver}
 BuildRequires:	automoc4
 BuildRequires:	cmake >= 2.6.2
